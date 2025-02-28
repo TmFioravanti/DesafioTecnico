@@ -106,5 +106,15 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ControleDeGastos.Controllers.TransacoesController",
+    "Method": "GetTotais",
+    "RelativePath": "api/Transacoes/totais",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

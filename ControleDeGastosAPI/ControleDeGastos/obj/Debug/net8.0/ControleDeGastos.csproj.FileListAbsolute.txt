@@ -63,10 +63,10 @@ C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\o
 C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ControleDeGastos.props
 C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ControleDeGastos.props
 C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\obj\Debug\net8.0\Controle.4FB340AE.Up2Date
 C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\obj\Debug\net8.0\ControleDeGastos.dll
 C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\obj\Debug\net8.0\refint\ControleDeGastos.dll
 C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\obj\Debug\net8.0\ControleDeGastos.pdb
 C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\obj\Debug\net8.0\ControleDeGastos.genruntimeconfig.cache
 C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\obj\Debug\net8.0\ref\ControleDeGastos.dll
+C:\Users\Thiago Maia\Desktop\testetecnico\ControleDeGastosAPI\ControleDeGastos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

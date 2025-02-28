@@ -15,7 +15,6 @@ namespace controleDeGastos.Service
             _transacaoService = transacaoService;
         }
 
-
         // Método para cadastrar uma pessoa
         public PessoaDTO CriarPessoa(PessoaDTO pessoaDTO)
         {
@@ -47,10 +46,45 @@ namespace controleDeGastos.Service
             var pessoa = pessoas.FirstOrDefault(p => p.Id == id);  // Busca a pessoa pelo ID
             if (pessoa == null) return false;  // Se não encontrar a pessoa, retorna false
 
-            pessoas.Remove(pessoa);  // Se encontrar, remove a pessoa da lista
+            pessoas.Remove(pessoa);  // Se encontrar, remove a pessoa da lista e todas as transações relacionadas a ela
             _transacaoService.DeletarTransacao(id);
 
             return true;  // Retorna true indicando sucesso
+        }
+        public object ObterTotais()
+        {
+            var pessoas = GetPessoas(); // Agora temos acesso ao serviço de pessoas
+            var transacoes = _transacaoService.GetTransacoes();
+
+            var totais = pessoas.Select(pessoa => new
+            {
+                PessoaId = pessoa.Id,
+                Nome = pessoa.Nome,
+                TotalReceitas = transacoes
+                    .Where(t => t.PessoaId == pessoa.Id && t.Tipo == "receita")
+                    .Sum(t => t.Valor),
+                TotalDespesas = transacoes
+                    .Where(t => t.PessoaId == pessoa.Id && t.Tipo == "despesa")
+                    .Sum(t => t.Valor),
+                Saldo = transacoes
+                    .Where(t => t.PessoaId == pessoa.Id)
+                    .Sum(t => t.Tipo == "receita" ? t.Valor : -t.Valor)
+            }).ToList();
+
+            var totalReceitas = totais.Sum(t => t.TotalReceitas);
+            var totalDespesas = totais.Sum(t => t.TotalDespesas);
+            var saldoGeral = totalReceitas - totalDespesas;
+
+            return new
+            {
+                Pessoas = totais,
+                TotalGeral = new
+                {
+                    TotalReceitas = totalReceitas,
+                    TotalDespesas = totalDespesas,
+                    SaldoGeral = saldoGeral
+                }
+            };
         }
     }
 }
